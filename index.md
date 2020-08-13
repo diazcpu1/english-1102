@@ -29,7 +29,7 @@
 		<img src="Other/Screenshots/a1-1.jpg" alt="Screenshot" style="width: 100%; height: 58%;">
 		<figcaption> A story that shows how important education is. </figcaption>
 	</figure>
-	<button onclick="document.location='default.asp'">HTML Tutorial</button>
+	<button onclick="document.location='Artifact-1/home.html'">Go to artifact</button>
 </div>
 
 <hr>
@@ -40,7 +40,7 @@
 		<img src="Other/Screenshots/a2-1.jpg" alt="Screenshot" style="width: 100%; height: 58%;">
 		<figcaption> The story of an immigrant looking for a better life. </figcaption>
 	</figure>
-	<button onclick="document.location='default.asp'">HTML Tutorial</button>
+	<button onclick="document.location='Artifact-2/La-Bestia.html'">Go to artifact</button>
 </div>
 
 <hr>
@@ -51,5 +51,5 @@
 		<img src="Other/Screenshots/a3-1.jpg" alt="Screenshot" style="width: 100%; height: 58%;">
 		<figcaption> Don't worry, be happy. </figcaption>
 	</figure>
-	<button onclick="document.location='default.asp'">HTML Tutorial</button>
+	<button onclick="document.location='Artifact-3/main.html'">Go to artifact</button>
 </div>
