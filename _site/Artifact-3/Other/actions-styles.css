@@ -1,0 +1,54 @@
+html {
+	text-align: center;
+	background-color: rgba(var(--r), var(--g), var(--b), var(--backgroundOpacity));
+	color: rgba(255, 255, 255, var(--textOpacity));	
+	--textOpacity: calc(var(--currentSliderOpacity) * -1 + 2);
+}	
+
+/* Variable declaration */
+:root {
+  --r: 0;
+  --g: 0;
+  --b: 0;
+  --currentSliderOpacity: 0.0; /* The value given by "wordSlider" */
+  --backgroundOpacity: calc(var(--currentSliderOpacity) * -1 + 1); /* the opacity of the background color */
+  --sliderOpacity: calc(var(--currentSliderOpacity) * -1 + 1); /* the opacity of the slider handler */
+}
+
+header {
+	padding-bottom: 25px;
+}
+
+#text {
+	padding-bottom: 25px;
+}
+
+::selection {	
+}
+
+#sliderDisplayed {
+	padding-bottom: 150px;
+}
+
+/* Slider */
+.slider {
+  -webkit-appearance: none; 
+  background: white;
+  outline: black;
+  border-radius: 5px;
+  height: 15px;
+  width: 50%;
+  opacity: var(--sliderOpacity);
+}
+
+/* Slider Handle */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%; 
+  background: rgba(0, 255, 0, 1.0);
+  cursor: pointer;
+  opacity: var(--sliderOpacity);
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title> Actions | The Meaning of You </title>
+		<meta charset="UTF-8"/>
+		<!-- External CSS for page elements -->
+		<link rel="stylesheet" type="text/css" href="actions-styles.css">
+	</head>
+	
+	<body>		
+		
+		<!-- Title-->
+		<header>
+			<h2> The Meaning of Your Actions </h2>
+		</header>
+		
+		<!-- Text-->
+		<div id="text">	
+				<script>
+					const texts = [
+					  ["You dropped your ice cream in front of all your fellow students.", "Feeling embarrased, you cover your face and leave.", "You walk in the next day and surprisingly, no one seems to remember!"],
+					  ["Even though you are a bit busy, you make time to meet an old friend who is in town.", "You tell them that you will have to go early to prepare for your class, but they understand and encourage you to study hard.", "At home, you are glad that you could balance time with friends and school."],
+					  ["In the early morning, you feel tired, but you go for a run instead of sleeping in again.", "You come home tired and take a shower.", "Even though getting up was difficult, you feel good about starting a productive habit."],
+					  ["You helped someone pick up their stuff after accidentally bumping into them.", "Despite being embarrased, you help them pick their items up.", "You mumble an apology as you hurriedly walk away."],
+					  ["You are studying for your final exam in a class you have been struggling in.", "The test turns out a lot easier than expected, as you are able to recall a lot of information from your study sessions.", "The next day, you can take more time to relax and go out with your friends."]
+					];
+
+					const random = Math.floor(Math.random() * texts.length);
+					const currentText = random;
+					
+					<!-- RGB for different texts -->					
+					if(currentText == 0) {
+						document.documentElement.style.setProperty('--r', 200);
+						document.documentElement.style.setProperty('--g', 0);
+						document.documentElement.style.setProperty('--b', 0);
+					} else if (currentText == 1) {
+						document.documentElement.style.setProperty('--r', 80);
+						document.documentElement.style.setProperty('--g', 30);
+						document.documentElement.style.setProperty('--b', 210);
+					} else if (currentText == 2) {
+						document.documentElement.style.setProperty('--r', 0);
+						document.documentElement.style.setProperty('--g', 0);
+						document.documentElement.style.setProperty('--b', 70);
+					} else if (currentText == 3) {
+						document.documentElement.style.setProperty('--r', 180);
+						document.documentElement.style.setProperty('--g', 0);
+						document.documentElement.style.setProperty('--b', 40);
+					} else if (currentText == 4) {
+						document.documentElement.style.setProperty('--r', 30);
+						document.documentElement.style.setProperty('--g', 0);
+						document.documentElement.style.setProperty('--b', 90);
+					}
+					
+					<!-- The text currently displayed -->
+					var displayed = document.getElementById("text"); 
+					function getText(part) {
+					  displayed.innerHTML = texts[currentText][part];
+					}
+
+					<!-- Get the first (index 0) of a random set of texts -->
+					getText(0);						
+				</script>						
+		</div>	
+		
+		<!-- Slider-->
+		<div id="sliderDisplayed">
+			<input type="range" min="0" max="1" step="0.001" value="0" class="slider" id="actionSlider">
+			
+			<script>
+				const slider = document.getElementById("actionSlider");
+				const root = document.documentElement;
+					
+				<!-- For changing page opacity -->
+				slider.addEventListener("input", (e) => {
+					root.style.setProperty("--currentSliderOpacity", e.target.value);					
+				});
+				
+				<!-- For changing the texts at certain values -->
+				slider.addEventListener("input", (e) => {
+					if(e.target.value > 0.25 && e.target.value < 0.5) {
+						getText(1);
+					} else if (e.target.value >= 0.5) {
+						getText(2);
+					} else {
+						getText(0);
+					}					
+				});
+			</script>
+		</div>
+	</body>	
+</html>

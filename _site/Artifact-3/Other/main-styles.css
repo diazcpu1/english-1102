@@ -1,0 +1,32 @@
+html {
+	text-align: center;
+	color: white;
+}
+
+header {
+	color: white;
+	padding-bottom: 25px;
+}	
+
+body {
+	background-color: black;
+}	
+
+button {
+  color: white;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: 250px;
+  background-color: gray;
+}
+
+#author {
+	position: absolute;
+	bottom: 0;
+	left: 10;
+}
