@@ -14,10 +14,10 @@
 
 <div>
 	<ul>
-  		<li> Introduction - Reflective Essay </li>
-		<li> Artifact 1 - Our Forgotten Goal </li>
-  		<li> Artifact 2 - La Bestia </li>
-  		<li> Artifact 3 - The Meaning of You </li>
+  		<li> <a href="Essay/reflective-essay.html">Introduction - Reflective Essay</a> </li>
+		<li> <a href="Artifact-1/home.html">Artifact 1 - Our Forgotten Goal</a> </li>
+  		<li> <a href="Artifact-2/La-Bestia.html">Artifact 2 - La Bestia</a> </li>
+  		<li> <a href="Artifact-3/main.html">Artifact 3 - The Meaning of You</a> </li>
 	</ul>
 </div>
 
