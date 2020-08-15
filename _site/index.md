@@ -26,7 +26,7 @@
 <div style="text-align: center;">
 	<h2> Reflective Essay </h2>
 	<figure>
-		<img src="Other/Screenshots/a1-1.jpg" alt="Screenshot" style="width: 100%; height: 58%;">
+		<img src="Other/Screenshots/essay.png" alt="Screenshot" style="width: 100%; height: 58%;">
 		<figcaption> My process of creating these projects, from drafting and collaborating to revising and publishing. </figcaption>
 	</figure>
 	<button onclick="document.location='Essay/reflective-essay.html'">Go to essay</button>
