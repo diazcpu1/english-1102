@@ -12,8 +12,8 @@
 
 <br>
 
-<div>
-	<ul>
+<div style="text-align: center;">
+	<ul style="list-style-type:none;">
   		<li> <a href="Essay/reflective-essay.html">Introduction - Reflective Essay</a> </li>
 		<li> <a href="Artifact-1/home.html">Artifact 1 - Our Forgotten Goal</a> </li>
   		<li> <a href="Artifact-2/La-Bestia.html">Artifact 2 - La Bestia</a> </li>
