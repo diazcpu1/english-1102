@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title> Thoughts | The Meaning of You </title>
+		<meta charset="UTF-8"/>
+		<!-- External CSS for page elements -->
+		<link rel="stylesheet" type="text/css" href="thoughts-styles.css">
+	</head>
+	
+	<body>		
+		
+		<!-- Title-->
+		<header>
+			<h2> The Meaning of Your Thoughts </h2>
+		</header>
+		
+		<!-- Text-->
+		<div id="text">	
+				<script>
+					const texts = [
+					  ["Before the first day of school, all of the possible outfit choices race through your mind.", "After getting dressed, you are unsure if your shirt's color looks good on you.", "You expect a few weird stares at school, but receive a few compliments instead!"],
+					  ["After a brutal first semester at school, you consider if you are smart enough to graduate after all.", "Feeling down, you decide to talk to your academic advisor.", "You know school will continue to be tough, but after a good talk, you feel motivated to keep studying and working hard."],
+					  ["The time for picking a major has come, and you panic when you realize that you are still unsure of what you want to do for the rest of your life.", "You do some research online.", "You find out your college gives students the option to change their major, and feel confident that you will eventually find your calling."],
+					  ["With a couple of projects to finish and tests to study for, you begin to feel overwhelmed.", "Before doing anything, you sit down and plan a schedule for the next few weeks.", "The semester may have been difficult, but you were able to finish with excellent grades."],
+					  ["You feel inclined to stay in your dorm and relax instead of going to class, but decide against it.", "As you great your classmates and professor, your energy starts to increase.", "It was a long day, but you are glad you made the decision to go to class."]
+					];
+
+					const random = Math.floor(Math.random() * texts.length);
+					const currentText = random;
+					
+					<!-- RGB for different texts -->					
+					if(currentText == 0) {
+						document.documentElement.style.setProperty('--r', 150);
+						document.documentElement.style.setProperty('--g', 120);
+						document.documentElement.style.setProperty('--b', 90);
+					} else if (currentText == 1) {
+						document.documentElement.style.setProperty('--r', 70);
+						document.documentElement.style.setProperty('--g', 70);
+						document.documentElement.style.setProperty('--b', 70);
+					} else if (currentText == 2) {
+						document.documentElement.style.setProperty('--r', 200);
+						document.documentElement.style.setProperty('--g', 0);
+						document.documentElement.style.setProperty('--b', 0);
+					} else if (currentText == 3) {
+						document.documentElement.style.setProperty('--r', 0);
+						document.documentElement.style.setProperty('--g', 0);
+						document.documentElement.style.setProperty('--b', 200);
+					} else if (currentText == 4) {
+						document.documentElement.style.setProperty('--r', 0);
+						document.documentElement.style.setProperty('--g', 0);
+						document.documentElement.style.setProperty('--b', 60);
+					}
+					
+					<!-- The text currently displayed -->
+					var displayed = document.getElementById("text"); 
+					function getText(part) {
+					  displayed.innerHTML = texts[currentText][part];
+					}
+
+					<!-- Get the first (index 0) of a random set of texts -->
+					getText(0);						
+				</script>						
+		</div>	
+		
+		<!-- Slider-->
+		<div>
+			<input type="range" min="0" max="1" step="0.001" value="0" class="slider" id="thoughtSlider">
+			
+			<script>
+				const slider = document.getElementById("thoughtSlider");
+				const root = document.documentElement;
+					
+				slider.addEventListener("input", (e) => {
+					root.style.setProperty("--currentSliderOpacity", e.target.value);					
+				});
+				
+				slider.addEventListener("input", (e) => {
+					if(e.target.value > 0.25 && e.target.value < 0.5) {
+						getText(1);
+					} else if (e.target.value >= 0.5) {
+						getText(2);
+					} else {
+						getText(0);
+					}
+					
+				});
+			</script>
+		</div>
+		
+	</body>	
+</html>
